@@ -31,32 +31,34 @@ body::before {
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
+    max-width: 1000px;
+    padding: 0 40px;
     margin: 0 auto;
 }
 
 .content-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: center;
+    gap: 80px;
     min-height: 80vh;
     position: relative;
     z-index: 1;
+    padding: 20px 0;
 }
 
 .left-content {
     flex: 1;
-    max-width: 550px;
+    max-width: 480px;
 }
 
 .right-content {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     position: relative;
+    padding-left: 0;
 }
 
 /* Remove the glow effect completely */
@@ -67,12 +69,12 @@ body::before {
 .logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .app-icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 12px;
     margin-right: 10px;
 }
@@ -85,25 +87,25 @@ body::before {
 
 h1 {
     font-size: 46px;
-    line-height: 1.2;
+    line-height: 1.15;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--text-color);
 }
 
 .subtitle {
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 19px;
+    margin-bottom: 45px;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .waitlist-form {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 input[type="email"] {
@@ -115,6 +117,7 @@ input[type="email"] {
     border-radius: 4px 0 0 4px;
     font-size: 16px;
     outline: none;
+    height: 50px;
 }
 
 input[type="email"]::placeholder {
@@ -136,6 +139,7 @@ button {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: 50px;
 }
 
 button:hover {
@@ -145,21 +149,23 @@ button:hover {
 .phone-mockup {
     position: relative;
     width: 100%;
-    max-width: 320px;
+    max-width: 290px;
     height: auto;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .mockup-image {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 36px;
+    border-radius: 40px;
     position: relative;
     z-index: 1;
     /* More natural shadow with two layers */
     box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.3),
-        0 30px 60px rgba(0, 0, 0, 0.5);
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        0 30px 60px rgba(0, 0, 0, 0.3);
 }
 
 #thank-you {
@@ -174,7 +180,7 @@ button:hover {
 }
 
 .social-link {
-    margin-top: 30px;
+    margin-top: 45px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -190,34 +196,44 @@ button:hover {
 }
 
 @media (max-width: 950px) {
+    .container {
+        padding: 0 25px;
+    }
+    
     .content-wrapper {
         flex-direction: column;
         padding: 40px 0;
         min-height: auto;
+        gap: 50px;
     }
     
     .left-content {
         text-align: center;
         order: 1;
+        max-width: 100%;
     }
     
     .right-content {
         order: 0;
-        margin-bottom: 30px;
+        margin-bottom: 0;
         justify-content: center;
+        padding-left: 0;
+        flex: 1;
     }
     
     .logo-container {
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     
     h1 {
         font-size: 36px;
+        margin-bottom: 20px;
     }
     
     .subtitle {
         font-size: 18px;
+        margin-bottom: 35px;
     }
     
     form {
@@ -227,14 +243,17 @@ button:hover {
     input[type="email"] {
         border-radius: 4px;
         margin-bottom: 10px;
+        height: 50px;
     }
     
     button {
         border-radius: 4px;
         width: 100%;
+        height: 50px;
     }
     
     .phone-mockup {
-        max-width: 280px;
+        max-width: 260px;
+        margin-right: 0;
     }
 } 
