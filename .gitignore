@@ -1,0 +1,45 @@
+# System files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+Icon
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime*
+.project
+.classpath
+
+# Node modules if you use them later
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Build files
+dist/
+build/
+out/
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Large media files
+# Uncomment this if you're including your own demo video
+# demo.mp4 

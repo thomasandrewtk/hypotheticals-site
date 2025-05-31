@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FFD52E;
+    --secondary-color: #232323;
+    --text-color: #FFFFFF;
+    --background-color: #1C1C1E;
+    --input-border: #333333;
+    --button-color: #FFD52E;
+    --button-hover: #FFE05E;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+}
+
+.left-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Remove the glow effect completely */
+.right-content::before {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.app-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.app-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.waitlist-form {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--input-border);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="email"]:focus {
+    border-color: var(--button-color);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+button {
+    padding: 15px 30px;
+    background-color: var(--button-color);
+    color: #1C1C1E;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.phone-mockup {
+    max-width: 100%;
+    position: relative;
+}
+
+.mockup-image {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    border-radius: 36px;
+    position: relative;
+    z-index: 1;
+    /* More natural shadow with two layers */
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+#thank-you {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.social-link {
+    margin-top: 30px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-link a {
+    color: var(--button-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.social-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 950px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    .left-content {
+        text-align: center;
+        order: 1;
+    }
+    
+    .right-content {
+        order: 0;
+        margin-bottom: 30px;
+    }
+    
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    form {
+        flex-direction: column;
+    }
+    
+    input[type="email"] {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        border-radius: 4px;
+        width: 100%;
+    }
+    
+    .mockup-image {
+        max-height: 50vh;
+    }
+} 
