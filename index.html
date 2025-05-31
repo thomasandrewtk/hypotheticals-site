@@ -24,9 +24,13 @@
                 <p class="subtitle">Quick wit. Persuasive arguments. Ridiculous scenarios.</p>
                 
                 <div class="waitlist-form">
-                    <form id="waitlist-form">
+                    <form action="https://formsubmit.co/tandrewtk@gmail.com" method="POST">
                         <input type="email" name="email" id="email" placeholder="Enter your email" required>
                         <button type="submit">Join waitlist</button>
+                        <input type="hidden" name="_subject" value="New Hypotheticals Waitlist Signup">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://thomasandrewtk.github.io/hypotheticals-site/thanks.html">
+                        <input type="hidden" name="_url" value="https://thomasandrewtk.github.io/hypotheticals-site/index.html">
                     </form>
                 </div>
                 
@@ -48,44 +52,6 @@
         </div>
     </div>
     
-    <script>
-        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            
-            // Using FormSubmit's AJAX endpoint
-            fetch('https://formsubmit.co/ajax/tandrewtk@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email,
-                    _subject: 'New Hypotheticals Waitlist Signup'
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if(data.success === 'true' || data.success === true) {
-                    // Show thank you message
-                    document.getElementById('waitlist-form').style.display = 'none';
-                    document.getElementById('thank-you').classList.remove('hidden');
-                    
-                    // Or redirect to thanks page
-                    // window.location.href = 'thanks.html';
-                } else {
-                    console.error('Submission error:', data);
-                    alert('There was an error submitting your email. Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // If AJAX fails, submit the form directly
-                window.location.href = 'thanks.html';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
