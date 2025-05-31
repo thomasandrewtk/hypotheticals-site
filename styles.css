@@ -197,25 +197,26 @@ button:hover {
 
 @media (max-width: 950px) {
     .container {
-        padding: 0 25px;
+        padding: 0 25px 40px;
     }
     
     .content-wrapper {
         flex-direction: column;
-        padding: 40px 0;
+        padding: 40px 0 0;
         min-height: auto;
-        gap: 50px;
+        gap: 40px;
     }
     
     .left-content {
         text-align: center;
-        order: 1;
+        order: 0;
         max-width: 100%;
     }
     
     .right-content {
-        order: 0;
-        margin-bottom: 0;
+        order: 1;
+        margin-top: 20px;
+        margin-bottom: 40px;
         justify-content: center;
         padding-left: 0;
         flex: 1;
@@ -253,7 +254,7 @@ button:hover {
     }
     
     .phone-mockup {
-        max-width: 260px;
+        max-width: 340px;
         margin-right: 0;
     }
 } 
