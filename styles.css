@@ -54,7 +54,7 @@ body::before {
 .right-content {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
 }
@@ -143,13 +143,15 @@ button:hover {
 }
 
 .phone-mockup {
-    max-width: 100%;
     position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
 }
 
 .mockup-image {
-    max-width: 100%;
-    max-height: 80vh;
+    width: 100%;
+    height: auto;
     display: block;
     border-radius: 36px;
     position: relative;
@@ -202,6 +204,7 @@ button:hover {
     .right-content {
         order: 0;
         margin-bottom: 30px;
+        justify-content: center;
     }
     
     .logo-container {
@@ -231,7 +234,7 @@ button:hover {
         width: 100%;
     }
     
-    .mockup-image {
-        max-height: 50vh;
+    .phone-mockup {
+        max-width: 280px;
     }
 } 
